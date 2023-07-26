@@ -1,0 +1,28 @@
+.glowDropContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  z-index: -1;
+  background-color: transparent;
+}
+.glob {
+  opacity: 1;
+  pointer-events: none;
+  will-change: width filter transform opacity;
+}
+.hidden-glob {
+  animation: hide 0.5s forwards;
+}
+
+@keyframes hide {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}

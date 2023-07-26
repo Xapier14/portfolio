@@ -1,0 +1,133 @@
+:root {
+  --navbar-color: #14141491;
+  --navbar-logo-color: #8c85ee;
+  --navbar-logo-glow-color: #4e528d;
+  --navbar-logo-hover-glow-color: #8285ad;
+  --navbar-border-color: #736cce3f;
+  --navbar-shadow-color: #0f0f0fb0;
+  --navbar-button-color: #8c85ee;
+  --navbar-button-glow-color: #4e528d;
+  --navbar-button-hover-text-color: #141414;
+  --navbar-button-hover-color: #8c85ee;
+  --navbar-button-focus-color: #aaa3ff;
+  --navbar-button-focus-ring-color: #646cff;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 2rem;
+  padding: 0.5rem 1rem;
+  background-color: var(--navbar-color);
+  border-bottom: 1px solid var(--navbar-border-color);
+  box-shadow: 0 0 0.5rem var(--navbar-shadow-color);
+  opacity: 1;
+  backdrop-filter: blur(10px);
+  z-index: 100;
+  transition: transform 0.25s;
+}
+
+.hidden {
+  transform: translateY(-100%);
+}
+
+.navbar-logo > a {
+  color: var(--navbar-logo-color);
+  text-shadow: 0 0 0.5rem var(--navbar-logo-glow-color);
+  transition: text-shadow 0.25s;
+  text-decoration: none;
+
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+.navbar-logo > a :hover {
+  text-shadow: 0 0 1rem var(--navbar-logo-hover-glow-color);
+}
+
+.navbar-logo > a > h1 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  font-family: "Bebas Neue", sans-serif;
+  letter-spacing: 0.025em;
+  transform: translateY(0.05em);
+}
+
+.navbar-buttons {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  flex-direction: row;
+  justify-content: flex-end;
+  width: auto;
+  height: 100%;
+}
+
+.navbar-buttons > ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-buttons > ul > li {
+  margin-left: 0.5rem;
+}
+
+.navbar-buttons > ul > li > a {
+  font-size: 1rem;
+  font-weight: 300;
+  background-color: transparent;
+  color: var(--navbar-button-color);
+  border: 1px solid var(--navbar-button-color);
+  border-radius: 0.3rem;
+  padding: 0.25rem 0.5rem;
+  text-decoration: none;
+  transition: color 0.25s;
+  outline: none;
+  text-shadow: 0 0 0.25rem var(--navbar-button-glow-color);
+  box-shadow: 0 0 0.125rem var(--navbar-button-glow-color);
+
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+.navbar-buttons > ul > li :hover {
+  background-color: var(--navbar-button-hover-color);
+  border-color: var(--navbar-button-hover-color);
+  color: var(--navbar-button-hover-text-color);
+  text-shadow: none;
+  box-shadow: none;
+}
+
+.navbar-buttons > ul > li :focus {
+  background-color: var(--navbar-button-focus-color);
+  border-color: var(--navbar-button-focus-color);
+  color: var(--navbar-button-hover-text-color);
+  text-shadow: none;
+  box-shadow: none;
+}

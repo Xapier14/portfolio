@@ -1,0 +1,36 @@
+$card-background-color: #14141469;
+$card-border-color: #736cce3f;
+$card-border-shadow-color: #0f0f0fc2;
+
+.card {
+  position: relative;
+  padding: 1rem 2rem;
+  padding-top: 0rem;
+  background-color: $card-background-color;
+  border: 1px solid $card-border-color;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 0.5rem $card-border-shadow-color;
+  overflow: hidden;
+  clip-path: inset(0 0 0 0 round 0.5rem);
+
+  &:before {
+    width: 800px;
+    height: 800px;
+    left: -400px;
+    top: -400px;
+    display: block;
+    position: fixed;
+    // radial gradient soft glow
+    background: radial-gradient(
+      circle,
+      rgba(190, 141, 255, 0.158) 0%,
+      transparent 40%
+    );
+    // blur filter
+    filter: blur(100px);
+    overflow: hidden;
+    content: "";
+    z-index: -1;
+    transform: translate3d(var(--mouse-x), var(--mouse-y), 0);
+  }
+}

@@ -1,0 +1,50 @@
+@import "../common/card-style.scss";
+
+$tech-card-text-color: #cfc2e2;
+$tech-card-heading-color: #f0e5ff;
+$tech-card-heading-glow-color: #bb9de4b2;
+
+.tech-card {
+  color: $tech-card-text-color;
+  font-weight: 300;
+  font-family: "Inconsolata", "monospace", sans-serif;
+  h1,
+  h2 {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 600;
+    color: $tech-card-heading-color;
+    text-shadow: 0px 0px 50px $tech-card-heading-glow-color;
+  }
+  h2 {
+    font-size: 1.5rem;
+    text-shadow: 0px 0px 30px $tech-card-heading-glow-color;
+  }
+  .tech-card-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    cursor: default;
+    img,
+    svg {
+      height: 1.5rem;
+      width: 1.5rem;
+      margin-right: 0.5rem;
+      filter: drop-shadow(0px 0px 10px $tech-card-heading-glow-color);
+    }
+    padding-bottom: 0.25rem;
+    border-bottom: 1px solid $card-border-color;
+  }
+
+  p,
+  .tech-card-body {
+    margin-top: 0;
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    letter-spacing: 0.025rem;
+  }
+}

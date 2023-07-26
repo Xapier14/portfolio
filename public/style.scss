@@ -1,0 +1,47 @@
+@import "styles/colors.scss";
+
+:root {
+  font-family: "Geologica", Inter, system-ui, Avenir, Helvetica, Arial,
+    sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: $bg-color;
+  color: $fg-color;
+}
+
+#content {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 8rem;
+}
+
+@media (max-width: 1024px) {
+  #content {
+    padding: 0 5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  #content {
+    padding: 0 3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #content {
+    padding: 0 3rem;
+  }
+}

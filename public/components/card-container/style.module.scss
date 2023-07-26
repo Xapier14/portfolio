@@ -1,0 +1,26 @@
+.card-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  & > * {
+    margin-bottom: 1rem;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+:global(.tech-card-container) {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 1rem;
+  :global(.card) {
+    flex: 1;
+    margin: 0;
+    min-width: max(12rem, 25%);
+  }
+}
