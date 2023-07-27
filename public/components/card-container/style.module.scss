@@ -2,7 +2,6 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-
   & > * {
     margin-bottom: 1rem;
     &:last-child {
@@ -22,5 +21,16 @@
     flex: 1;
     margin: 0;
     min-width: max(12rem, 25%);
+  }
+  // if mobile
+  @media (max-width: 700px) {
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 0;
+    :global(.card) {
+      flex: unset;
+      min-width: unset;
+      margin-bottom: 1rem;
+    }
   }
 }

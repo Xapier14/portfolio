@@ -34,7 +34,8 @@ export default function SimpleCard(props: SimpleCardProps) {
   });
 
   return (
-    <div class="card" id={id}>
+    <div class="card active-glow" id={id}>
+      <div class="card-bg"></div>
       {props.children}
     </div>
   );

@@ -1,23 +1,54 @@
-$card-background-color: #14141469;
+$card-background-color: #14141471;
 $card-border-color: #736cce3f;
 $card-border-shadow-color: #0f0f0fc2;
+$cursor-glow-radius: 18rem;
 
 .card {
   position: relative;
-  padding: 1rem 2rem;
+  padding: 1.5rem 1.5rem;
   padding-top: 0rem;
-  background-color: $card-background-color;
+  background-color: transparent;
   border: 1px solid $card-border-color;
   border-radius: 0.5rem;
   box-shadow: 0 0 0.5rem $card-border-shadow-color;
   overflow: hidden;
-  clip-path: inset(0 0 0 0 round 0.5rem);
+  clip-path: inset(0 0 0 0 round 0.5rem) !important;
+  border-radius: 0.5rem;
 
-  &:before {
-    width: 800px;
-    height: 800px;
-    left: -400px;
-    top: -400px;
+  .card-bg {
+    position: absolute;
+    display: block;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $card-background-color;
+    backdrop-filter: blur(10px);
+    border-radius: 0.5rem;
+    z-index: -1;
+    clip-path: inset(0 0 0 0 round 0.5rem) !important;
+  }
+}
+
+.active-glow {
+  .general-bg {
+    position: absolute;
+    display: block;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $card-background-color;
+    backdrop-filter: blur(10px);
+    z-index: -1;
+    clip-path: inset(0 0 0 0);
+  }
+  clip-path: inset(0 0 0 0);
+  &:after {
+    width: calc($cursor-glow-radius * 2);
+    height: calc($cursor-glow-radius * 2);
+    left: calc($cursor-glow-radius * -1);
+    top: calc($cursor-glow-radius * -1);
     display: block;
     position: fixed;
     // radial gradient soft glow
@@ -27,10 +58,14 @@ $card-border-shadow-color: #0f0f0fc2;
       transparent 40%
     );
     // blur filter
-    filter: blur(100px);
+    filter: blur(calc($cursor-glow-radius * 0.33));
     overflow: hidden;
     content: "";
     z-index: -1;
     transform: translate3d(var(--mouse-x), var(--mouse-y), 0);
+    // disable if mobile
+    @media (max-width: 768px) {
+      display: none;
+    }
   }
 }

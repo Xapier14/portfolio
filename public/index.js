@@ -8,8 +8,8 @@ import {
   prerender as ssr,
 } from "preact-iso";
 
-import { GlowDropController } from "./components/glowdrop";
-import { NavBar } from "./components/navbar";
+import { GlowDropController } from "./components/glowdrop/index.tsx";
+import { NavBar } from "./components/navbar/index.tsx";
 
 import Home from "./pages/home/index.tsx";
 import NotFound from "./pages/_404.tsx";

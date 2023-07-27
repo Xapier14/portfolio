@@ -93,7 +93,7 @@ export function Home() {
             </TechList>
           </TechCard>
           <TechCard name="Backend" icon={ServerIcon}>
-            <TechList>
+            <TechList singleColumn={true}>
               <TechListItem>Firebase</TechListItem>
               <TechListItem>Express.JS</TechListItem>
               <TechListItem>ASP.NET Core</TechListItem>
@@ -104,25 +104,25 @@ export function Home() {
               <TechListItem>PostgreSQL</TechListItem>
               <TechListItem>MongoDB</TechListItem>
               <TechListItem>SQLite</TechListItem>
-              <TechListItem>MS SQL Server</TechListItem>
+              <TechListItem>SQL Server</TechListItem>
             </TechList>
           </TechCard>
           <TechCard name="Mobile" icon={MobileIcon}>
-            <TechList>
+            <TechList singleColumn={true}>
               <TechListItem>React Native</TechListItem>
               <TechListItem>Flutter</TechListItem>
               <TechListItem>Ionic</TechListItem>
             </TechList>
           </TechCard>
           <TechCard name="DevOps" icon={DevIcon}>
-            <TechList>
+            <TechList singleColumn={true}>
               <TechListItem>Git</TechListItem>
               <TechListItem>Docker</TechListItem>
               <TechListItem>GitHub Actions</TechListItem>
             </TechList>
           </TechCard>
           <TechCard name="Cloud" icon={CloudIcon}>
-            <TechList>
+            <TechList singleColumn={true}>
               <TechListItem>Amazon Web Services</TechListItem>
               <TechListItem>Microsoft Azure</TechListItem>
               <TechListItem>Google Cloud Platform</TechListItem>

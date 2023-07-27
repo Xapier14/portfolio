@@ -1,5 +1,6 @@
 import { useEffect } from "preact/hooks";
 import style from "./style.module.scss";
+import "../common/card-style.scss";
 import { useLocation } from "preact-iso";
 
 export function NavBar() {
@@ -29,7 +30,8 @@ export function NavBar() {
   });
   return (
     <>
-      <header class={`${style["navbar"]} ${style["hidden"]}`}>
+      <header class={`${style["navbar"]} ${style["hidden"]} active-glow`}>
+        <div class="general-bg"></div>
         <div class={style["navbar-logo"]}>
           <a href="/">
             <h1>Lance Crisang</h1>

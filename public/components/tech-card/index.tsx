@@ -10,7 +10,8 @@ interface TechCardProps {
 export default function TechCard(props: TechCardProps) {
   const isIconJsxElement = typeof props.icon != "string";
   return (
-    <div class={`card ${style["tech-card"]}`}>
+    <div class={`card active-glow ${style["tech-card"]}`}>
+      <div class="card-bg"></div>
       <div class={style["tech-card-header"]}>
         {props.icon ? (
           isIconJsxElement == true ? (
