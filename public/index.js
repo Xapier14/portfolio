@@ -21,7 +21,7 @@ export function App() {
   return (
     <LocationProvider>
       <CardGlowController />
-      <GlowDropController />
+      <GlowDropController numberOfGlobsForMobile={0} />
       <NavBar />
       <div id="content">
         <ErrorBoundary>

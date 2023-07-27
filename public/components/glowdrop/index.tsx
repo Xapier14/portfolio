@@ -44,7 +44,11 @@ export function GlowDropController(props: GlowDropControllerProps) {
 
   return (
     <>
-      <div class={style.glowDropContainer}>
+      <div
+        class={`${style["glow-drop-container"]} ${
+          pickedGlobs.length == 0 ? style["glow-drop-disabled"] : ""
+        }`}
+      >
         {pickedGlobs.map((glob, i) => (
           <img
             src={glob.glob}

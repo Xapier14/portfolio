@@ -215,6 +215,9 @@ const init = (
   count: number,
   globs: string[]
 ): { glob: string; anim: string }[] => {
+  if (count == 0) {
+    return [];
+  }
   if (styleElement) document.head.removeChild(styleElement);
   styleElement = document.createElement("style");
   document.head.appendChild(styleElement);
