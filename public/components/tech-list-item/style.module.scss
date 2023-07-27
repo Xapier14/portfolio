@@ -18,15 +18,15 @@
     transition: filter 0.125s ease-in-out;
   }
 
-  &:hover {
-    svg,
-    img {
-      filter: drop-shadow(0px 0px 10px #bb9de4b2);
-    }
-    h3 {
-      text-shadow: 0px 0px 10px #bb9de4b2;
-    }
-  }
+  // &:hover {
+  //   svg,
+  //   img {
+  //     filter: drop-shadow(0px 0px 10px #bb9de4b2);
+  //   }
+  //   h3 {
+  //     text-shadow: 0px 0px 10px #bb9de4b2;
+  //   }
+  // }
 }
 .tech-list-item-icon {
   height: 1.5rem;
