@@ -142,7 +142,7 @@ export function Home() {
             demo="https://action.xapier.me"
             github="https://github.com/Xapier14/action-dashboard"
           ></ProjectCard>
-          <ProjectCard
+          {/* <ProjectCard
             name="ACTION Companion"
             icon={MobileIcon}
             feature="assets/project-2.png"
@@ -153,7 +153,7 @@ export function Home() {
             icon={WebIcon}
             feature="assets/project-2.png"
             link=""
-          ></ProjectCard>
+          ></ProjectCard> */}
         </CardContainer>
       </section>
       <Footer />
