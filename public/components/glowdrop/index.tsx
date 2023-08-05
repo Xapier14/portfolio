@@ -22,14 +22,14 @@ export function GlowDropController(props: GlowDropControllerProps) {
   useEffect(() => {
     console.log("GlowDrop mounted");
     const globs = [
-      "./assets/globs/glob1.svg",
-      "./assets/globs/glob2.svg",
-      "./assets/globs/glob3.svg",
-      "./assets/globs/glob4.svg",
-      "./assets/globs/glob5.svg",
-      "./assets/globs/glob6.svg",
-      "./assets/globs/glob7.svg",
-      "./assets/globs/glob8.svg",
+      "/assets/globs/glob1.svg",
+      "/assets/globs/glob2.svg",
+      "/assets/globs/glob3.svg",
+      "/assets/globs/glob4.svg",
+      "/assets/globs/glob5.svg",
+      "/assets/globs/glob6.svg",
+      "/assets/globs/glob7.svg",
+      "/assets/globs/glob8.svg",
     ];
     const n = isMobile
       ? props.numberOfGlobsForMobile ?? numberOfGlobsForMobile

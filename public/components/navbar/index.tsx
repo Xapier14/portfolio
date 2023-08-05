@@ -30,7 +30,11 @@ export function NavBar() {
   });
   return (
     <>
-      <header class={`${style["navbar"]} ${style["hidden"]} active-glow`}>
+      <header
+        class={`${style["navbar"]} ${style["hidden"]} ${
+          autoHide ? style["interactive"] : ""
+        } active-glow`}
+      >
         <div class="general-bg"></div>
         <div class={style["navbar-logo"]}>
           <a href="/">
