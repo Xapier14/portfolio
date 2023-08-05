@@ -21,6 +21,15 @@ $project-card-border-color: #736cce3f;
       height: 100%;
       object-fit: cover;
       border-bottom: 1px solid $project-card-border-color;
+      transition: filter 0.125s ease-in-out;
+      filter: grayscale(50%);
+    }
+  }
+  &:hover {
+    .project-image-container {
+      img {
+        filter: grayscale(0%);
+      }
     }
   }
   .project-card-header {
