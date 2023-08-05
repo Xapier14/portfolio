@@ -7,8 +7,7 @@ $cursor-glow-radius: 18rem;
 
 .card {
   position: relative;
-  padding: 1.5rem 1.5rem;
-  padding-top: 0rem;
+  padding: 1rem 1.5rem 1.5rem;
   background-color: transparent;
   border: 1px solid $card-border-color;
   border-radius: 0.5rem;
@@ -19,7 +18,11 @@ $cursor-glow-radius: 18rem;
   h1,
   h2,
   h3 {
+    margin-top: 0;
     text-shadow: 2px 3px 20px $card-text-shadow-color;
+  }
+  p {
+    margin-bottom: 0;
   }
   .card-bg {
     position: absolute;
@@ -51,7 +54,7 @@ $cursor-glow-radius: 18rem;
     //   z-index: -1;
     //   // inset shadow
     // }
-    &::after {
+    &::before {
       clip-path: inset(0 0 0 0 round 0.5rem) !important;
       border-radius: 0.5rem;
       position: absolute;
@@ -87,6 +90,7 @@ $cursor-glow-radius: 18rem;
     top: calc($cursor-glow-radius * -1);
     display: block;
     position: fixed;
+    pointer-events: none;
     // radial gradient soft glow
     background: radial-gradient(
       circle,
@@ -97,7 +101,7 @@ $cursor-glow-radius: 18rem;
     filter: blur(calc($cursor-glow-radius * 0.33));
     overflow: hidden;
     content: "";
-    z-index: -1;
+    z-index: 10;
     transform: translate3d(var(--mouse-x), var(--mouse-y), 0);
     // disable if mobile
     @media (max-width: 768px) {

@@ -1,8 +1,9 @@
 import SimpleCard from "../../components/simple-card";
 import CardContainer from "../../components/card-container";
-import TechCard from "../../components/tech-card";
+import ShowcaseCard from "../../components/showcase-card";
 import TechList from "../../components/tech-list";
 import TechListItem from "../../components/tech-list-item";
+import ProjectCard from "../../components/project-card";
 import Footer from "../../components/footer";
 
 import style from "./style.module.scss";
@@ -81,8 +82,8 @@ export function Home() {
       </section>
       <section id="tech" class={style["tech"]}>
         <h1>My Tech Stack</h1>
-        <CardContainer class="tech-card-container">
-          <TechCard icon={WebIcon} name="Frontend">
+        <CardContainer class="grid-list-container">
+          <ShowcaseCard icon={WebIcon} name="Frontend">
             <TechList>
               <TechListItem>HTML5</TechListItem>
               <TechListItem>CSS3</TechListItem>
@@ -91,43 +92,68 @@ export function Home() {
               <TechListItem>Preact</TechListItem>
               <TechListItem>Angular</TechListItem>
             </TechList>
-          </TechCard>
-          <TechCard name="Backend" icon={ServerIcon}>
+          </ShowcaseCard>
+          <ShowcaseCard name="Backend" icon={ServerIcon}>
             <TechList singleColumn={true}>
               <TechListItem>Firebase</TechListItem>
               <TechListItem>Express.JS</TechListItem>
               <TechListItem>ASP.NET Core</TechListItem>
             </TechList>
-          </TechCard>
-          <TechCard name="Database" icon={DataIcon}>
+          </ShowcaseCard>
+          <ShowcaseCard name="Database" icon={DataIcon}>
             <TechList>
               <TechListItem>PostgreSQL</TechListItem>
               <TechListItem>MongoDB</TechListItem>
               <TechListItem>SQLite</TechListItem>
               <TechListItem>SQL Server</TechListItem>
             </TechList>
-          </TechCard>
-          <TechCard name="Mobile" icon={MobileIcon}>
+          </ShowcaseCard>
+          <ShowcaseCard name="Mobile" icon={MobileIcon}>
             <TechList singleColumn={true}>
               <TechListItem>React Native</TechListItem>
               <TechListItem>Flutter</TechListItem>
               <TechListItem>Ionic</TechListItem>
             </TechList>
-          </TechCard>
-          <TechCard name="DevOps" icon={DevIcon}>
+          </ShowcaseCard>
+          <ShowcaseCard name="DevOps" icon={DevIcon}>
             <TechList singleColumn={true}>
               <TechListItem>Git</TechListItem>
               <TechListItem>Docker</TechListItem>
               <TechListItem>GitHub Actions</TechListItem>
             </TechList>
-          </TechCard>
-          <TechCard name="Cloud" icon={CloudIcon}>
+          </ShowcaseCard>
+          <ShowcaseCard name="Cloud" icon={CloudIcon}>
             <TechList singleColumn={true}>
               <TechListItem>Amazon Web Services</TechListItem>
               <TechListItem>Microsoft Azure</TechListItem>
               <TechListItem>Google Cloud Platform</TechListItem>
             </TechList>
-          </TechCard>
+          </ShowcaseCard>
+        </CardContainer>
+      </section>
+      <section id="projects" class={style["projects"]}>
+        <h1>My Recent Projects</h1>
+        <CardContainer grid={true}>
+          <ProjectCard
+            name="ACTION Dashboard"
+            icon={WebIcon}
+            feature="https://github.com/Xapier14/action-dashboard/raw/main/.github/screenshots/login.png?"
+            link="projects/action-dashboard"
+            demo="https://action.xapier.me"
+            github="https://github.com/Xapier14/action-dashboard"
+          ></ProjectCard>
+          <ProjectCard
+            name="ACTION Companion"
+            icon={MobileIcon}
+            feature="assets/project-2.png"
+            link=""
+          ></ProjectCard>
+          <ProjectCard
+            name="ACTION Dashboard"
+            icon={WebIcon}
+            feature="assets/project-2.png"
+            link=""
+          ></ProjectCard>
         </CardContainer>
       </section>
       <Footer />
