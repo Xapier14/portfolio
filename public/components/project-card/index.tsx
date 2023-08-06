@@ -5,7 +5,6 @@ import "../common/card-style.scss";
 
 interface ProjectCardProps {
   name: string;
-  id?: string;
   link?: string;
   github?: string;
   demo?: string;
