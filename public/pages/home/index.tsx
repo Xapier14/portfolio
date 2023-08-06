@@ -137,10 +137,18 @@ export function Home() {
           <ProjectCard
             name="ACTION Dashboard"
             icon={WebIcon}
-            feature="https://github.com/Xapier14/action-dashboard/raw/main/.github/screenshots/login.png?"
+            feature="/assets/projects/action-dashboard.png"
             link="projects/action-dashboard"
             demo="https://action.xapier.me"
             github="https://github.com/Xapier14/action-dashboard"
+          ></ProjectCard>
+          <ProjectCard
+            name="ACTION Companion"
+            icon={MobileIcon}
+            feature="/assets/projects/action-companion.png"
+            link="projects/action-companion"
+            demo="https://action-mobile.pages.dev"
+            github="https://github.com/Xapier14/action-companion"
           ></ProjectCard>
           {/* <ProjectCard
             name="ACTION Companion"
