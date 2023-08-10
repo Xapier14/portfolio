@@ -19,6 +19,9 @@ interface Project {
   description?: string;
   demo?: string;
   github?: string;
+  screenshots?: string[];
+  seeAlso?: string[];
+  technologies?: string[];
 }
 
 const projects = projectsDataSource as unknown as Project[];
