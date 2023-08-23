@@ -127,7 +127,7 @@
   box-shadow: none;
 }
 
-.navbar-buttons > ul > li :focus {
+.navbar-buttons > ul > li :active {
   background-color: var(--navbar-button-focus-color);
   border-color: var(--navbar-button-focus-color);
   color: var(--navbar-button-hover-text-color);

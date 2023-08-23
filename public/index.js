@@ -15,7 +15,9 @@ import Home from "./pages/home/index.tsx";
 import NotFound from "./pages/_404.tsx";
 import { CardGlowController } from "./components/card-glow-controller/index.tsx";
 
-const About = lazy(() => import("./pages/about/index.tsx"));
+const Projects = lazy(() => import("./pages/projects/index.tsx"));
+const ProjectsDetail = lazy(() => import("./pages/projects/detail.tsx"));
+const Contact = lazy(() => import("./pages/contact/index.tsx"));
 
 export function App() {
   return (
@@ -26,8 +28,10 @@ export function App() {
       <div id="content">
         <ErrorBoundary>
           <Router>
-            <Home path="/" />
-            {/* <Projects path="/projects" /> */}
+            <Route path="/" component={Home} />
+            <Route path="/projects" component={Projects} />
+            <Route path="/projects/:id" component={ProjectsDetail} />
+            <Route path="/contact" component={Contact} />
             <Route default component={NotFound} />
           </Router>
         </ErrorBoundary>

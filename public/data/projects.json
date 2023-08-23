@@ -1,0 +1,51 @@
+[
+  {
+    "name": "ACTION Dashboard",
+    "description": "A dashboard for the Batangas State University's ACTION Center. Monitors and keeps track of building status and inspector generated reports.",
+    "id": "action-dashboard",
+    "type": "web",
+    "feature": "/assets/projects/action-dashboard.png",
+    "demo": "https://action.xapier.me",
+    "github": "https://github.com/Xapier14/action-dashboard",
+    "screenshots": [],
+    "seeAlso": ["action-companion"],
+    "technologies": [
+      "Node.js",
+      "Express.js",
+      "Angular",
+      "MongoDB",
+      "Mongoose",
+      "Docker",
+      "ReCaptcha Enterprise",
+      "Azure App Service",
+      "Azure Blob Storage",
+      "Azure Container Registry",
+      "Cloudflare Pages"
+    ]
+  },
+  {
+    "name": "ACTION Companion",
+    "description": "A mobile companion app for the Batangas State University's ACTION Center. Allows inspectors to generate reports and monitor building status.",
+    "id": "action-companion",
+    "type": "mobile",
+    "feature": "/assets/projects/action-companion.png",
+    "demo": "https://action-mobile.pages.dev",
+    "github": "https://github.com/Xapier14/action-companion",
+    "screenshots": [],
+    "seeAlso": ["action-dashboard"],
+    "technologies": [
+      "Node.js",
+      "Express.js",
+      "Ionic",
+      "Angular",
+      "MongoDB",
+      "Mongoose",
+      "Docker",
+      "ReCaptcha Enterprise",
+      "Azure App Service",
+      "Azure Blob Storage",
+      "Azure Container Registry",
+      "Cloudflare Pages"
+    ]
+  }
+]

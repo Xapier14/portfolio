@@ -8,6 +8,8 @@ import Footer from "../../components/footer";
 
 import style from "./style.module.scss";
 
+import { projects, getIcon } from "../../data/projects";
+
 import {
   CloudIcon,
   CopyIconMini,
@@ -17,7 +19,6 @@ import {
   ServerIcon,
   WebIcon,
 } from "../../components/icons";
-
 export function Home() {
   const copyToClipboardAsync = async (text: string) => {
     try {
@@ -26,6 +27,21 @@ export function Home() {
       console.error("Failed to copy: ", err);
     }
   };
+
+  const projectDataItems = projects.map((project) => {
+    const icon = getIcon(project.type);
+    return (
+      <ProjectCard
+        key={project.id}
+        name={project.name}
+        icon={icon}
+        link={`projects/${project.id}`}
+        feature={project.feature}
+        github={project.github}
+        demo={project.demo}
+      ></ProjectCard>
+    );
+  });
 
   return (
     <>
@@ -133,36 +149,7 @@ export function Home() {
       </section>
       <section id="projects" class={style["projects"]}>
         <h1>My Recent Projects</h1>
-        <CardContainer grid={true}>
-          <ProjectCard
-            name="ACTION Dashboard"
-            icon={WebIcon}
-            feature="/assets/projects/action-dashboard.png"
-            link="projects/action-dashboard"
-            demo="https://action.xapier.me"
-            github="https://github.com/Xapier14/action-dashboard"
-          ></ProjectCard>
-          <ProjectCard
-            name="ACTION Companion"
-            icon={MobileIcon}
-            feature="/assets/projects/action-companion.png"
-            link="projects/action-companion"
-            demo="https://action-mobile.pages.dev"
-            github="https://github.com/Xapier14/action-companion"
-          ></ProjectCard>
-          {/* <ProjectCard
-            name="ACTION Companion"
-            icon={MobileIcon}
-            feature="assets/project-2.png"
-            link=""
-          ></ProjectCard>
-          <ProjectCard
-            name="ACTION Dashboard"
-            icon={WebIcon}
-            feature="assets/project-2.png"
-            link=""
-          ></ProjectCard> */}
-        </CardContainer>
+        <CardContainer grid={true}>{projectDataItems}</CardContainer>
       </section>
       <Footer />
     </>

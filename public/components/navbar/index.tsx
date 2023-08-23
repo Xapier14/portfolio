@@ -4,9 +4,11 @@ import "../common/card-style.scss";
 import { useLocation } from "preact-iso";
 
 export function NavBar() {
-  const path = useLocation().url;
-  const autoHide = path == "/";
+  var autoHide = false;
+  const location = useLocation();
   useEffect(() => {
+    let path = location.url;
+    autoHide = path == "/";
     console.log(`NavBar Auto-Hide: ${autoHide}`);
     var navbar = document.getElementsByClassName(style["navbar"])[0];
     if (navbar && !autoHide) {
@@ -27,7 +29,7 @@ export function NavBar() {
         }
       }
     });
-  });
+  }, [location]);
   return (
     <>
       <header
@@ -44,13 +46,13 @@ export function NavBar() {
         <nav class={style["navbar-buttons"]}>
           <ul>
             <li>
-              <a href="#about">About</a>
+              <a href="/">Home</a>
             </li>
             <li>
-              <a href="#projects">Projects</a>
+              <a href="/projects">Projects</a>
             </li>
             <li>
-              <a href="#contact">Contact</a>
+              <a href="/contact">Contact</a>
             </li>
           </ul>
         </nav>
