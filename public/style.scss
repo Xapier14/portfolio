@@ -41,6 +41,7 @@ body {
   background: $bg-color;
   color: $fg-color;
   overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 #content {
