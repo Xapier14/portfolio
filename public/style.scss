@@ -13,6 +13,26 @@
   -webkit-text-size-adjust: 100%;
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #736cce3f;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #8c85ee;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #a9a3f8;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -20,6 +40,7 @@ body {
   min-height: 100vh;
   background: $bg-color;
   color: $fg-color;
+  overflow-y: scroll;
 }
 
 #content {
