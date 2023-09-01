@@ -63,7 +63,7 @@ export default function ProjectCard(props: ProjectCardProps) {
             ) : null}
           </div>
           <div class={style["right"]}>
-            {hasLink ? <a href={props.link}>View Project Page</a> : null}
+            {hasLink ? <a href={props.link}>View Info</a> : null}
             {hasDemo ? (
               <a href={props.demo} target="_blank">
                 View Demo
