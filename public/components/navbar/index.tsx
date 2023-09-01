@@ -18,6 +18,8 @@ export function NavBar() {
     // scroll event listener
     window.addEventListener("scroll", () => {
       if (navbar) {
+        let path = location.url;
+        autoHide = path == "/";
         if (!autoHide) {
           navbar.classList.remove(style["hidden"]);
           return;
