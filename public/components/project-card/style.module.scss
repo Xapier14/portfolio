@@ -3,6 +3,11 @@ $project-card-heading-color: #f0e5ff;
 $project-card-heading-glow-color: #bb9de4b2;
 $project-card-border-color: #736cce3f;
 
+.is-clickable {
+  cursor: pointer !important;
+  user-select: none;
+}
+
 .project-card {
   display: flex;
   flex-direction: column;

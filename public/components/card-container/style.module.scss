@@ -35,7 +35,7 @@
   }
 }
 
-.grid-mode {
+.grid-mode-1 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
@@ -47,6 +47,19 @@
     grid-template-columns: repeat(2, 1fr);
   }
   @media (max-width: 700px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.grid-mode-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  :global(.card) {
+    margin: 0;
+  }
+  // if mobile
+  @media (max-width: 920px) {
     grid-template-columns: repeat(1, 1fr);
   }
 }

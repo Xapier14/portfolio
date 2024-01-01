@@ -5,7 +5,7 @@ interface ShowcaseCardProps {
   name: string;
   icon?: string | (() => JSX.Element);
   showcase?: string | (() => JSX.Element);
-  children: any;
+  children?: any;
 }
 
 export default function ShowcaseCard(props: ShowcaseCardProps) {

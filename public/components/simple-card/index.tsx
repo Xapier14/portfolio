@@ -4,7 +4,7 @@ import "../common/card-style.scss";
 import { useEffect, useState } from "preact/hooks";
 
 interface SimpleCardProps {
-  children: any;
+  children?: any;
 }
 
 export default function SimpleCard(props: SimpleCardProps) {

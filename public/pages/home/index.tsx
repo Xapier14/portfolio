@@ -28,14 +28,15 @@ export function Home() {
     }
   };
 
-  const projectDataItems = projects.map((project) => {
+  // get latest 3 projects
+  const projectDataItems = projects.copyWithin(3, 0).map((project) => {
     const icon = getIcon(project.type);
     return (
       <ProjectCard
         key={project.id}
         name={project.name}
         icon={icon}
-        link={`projects/${project.id}`}
+        infoLink={`projects/${project.id}`}
         feature={project.feature}
         github={project.github}
         demo={project.demo}
@@ -84,8 +85,36 @@ export function Home() {
         </div>
       </section>
       <section id="about" class={style["about"]}>
-        <SimpleCard>
-          <h1>About Me</h1>
+        <h1>My Services</h1>
+        <CardContainer grid="2">
+          <SimpleCard>
+            <h2>Full-Stack Development</h2>
+            <p>
+              I build web applications running on the cloud for a variety of use
+              cases. Responsive and mobile-friendly, these applications can run
+              on a variety of devices of different sizes. From e-commerce,
+              dashboards, and other web applications, I can build them for you.
+            </p>
+          </SimpleCard>
+          <SimpleCard>
+            <h2>Static Websites</h2>
+            <p>
+              I can build portfolio websites, showcase websites, and other
+              static websites for your personal or business needs. Suitable for
+              landing pages, blogs, portfolios such as photography, and more.
+            </p>
+          </SimpleCard>
+          <SimpleCard>
+            <h2>Desktop Applications</h2>
+            <p>
+              I build custom desktop applications ranging from Point-of-Sales
+              systems to personal tools. I can integrate third-party APIs and
+              services to your application to make it more powerful and useful
+              depending on your needs.
+            </p>
+          </SimpleCard>
+        </CardContainer>
+        {/* <SimpleCard>
           <p>
             I'm Lance Daniel Crisang, a Computer Science student studying at
             Batangas State University. I have a fascination with writing code
@@ -94,7 +123,7 @@ export function Home() {
             also interested in DevOps and Cloud Computing with preliminary
             experience with AWS, Azure, and GCP.
           </p>
-        </SimpleCard>
+        </SimpleCard> */}
       </section>
       <section id="tech" class={style["tech"]}>
         <h1>My Tech Stack</h1>
@@ -149,7 +178,7 @@ export function Home() {
       </section>
       <section id="projects" class={style["projects"]}>
         <h1>My Recent Projects</h1>
-        <CardContainer grid={true}>{projectDataItems}</CardContainer>
+        <CardContainer grid="1">{projectDataItems}</CardContainer>
       </section>
       <Footer />
     </>

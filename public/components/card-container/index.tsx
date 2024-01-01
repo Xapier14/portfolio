@@ -4,15 +4,15 @@ interface CardContainerProps {
   children: any;
   class?: string;
   id?: string;
-  grid?: boolean;
+  grid?: string;
 }
 
 export default function CardContainer(props: CardContainerProps) {
   return (
     <div
-      class={` ${props.grid == true ? style["grid-mode"] : ""} ${
-        style["card-container"]
-      } ${props.class ?? ""}`}
+      class={` ${
+        props.grid != undefined ? style["grid-mode-" + props.grid] : ""
+      } ${style["card-container"]} ${props.class ?? ""}`}
       id={props.id}
     >
       {props.children}

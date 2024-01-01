@@ -21,10 +21,13 @@ interface Project {
   github?: string;
   screenshots?: string[];
   seeAlso?: string[];
+  dateAddedUtc?: string;
   technologies?: string[];
 }
 
-const projects = projectsDataSource as unknown as Project[];
+const projects = (projectsDataSource as unknown as Project[]).sort((p1, p2) => {
+  return Date.parse(p2.dateAddedUtc) - Date.parse(p1.dateAddedUtc);
+});
 function getIcon(icon: string): () => JSXInternal.Element | null {
   switch (icon) {
     case "web":
