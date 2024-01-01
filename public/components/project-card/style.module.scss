@@ -29,7 +29,7 @@ $project-card-border-color: #736cce3f;
       object-fit: cover;
       border-bottom: 1px solid $project-card-border-color;
       transition: filter 0.125s ease-in-out;
-      // add purple tint
+      opacity: 0.75;
       filter: grayscale(20%);
     }
     &::after {

@@ -87,32 +87,29 @@ export function Home() {
       <section id="about" class={style["about"]}>
         <h1>My Services</h1>
         <CardContainer grid="2">
-          <SimpleCard>
-            <h2>Full-Stack Development</h2>
+          <ShowcaseCard name="Full-Stack Development">
             <p>
               I build web applications running on the cloud for a variety of use
               cases. Responsive and mobile-friendly, these applications can run
               on a variety of devices of different sizes. From e-commerce,
               dashboards, and other web applications, I can build them for you.
             </p>
-          </SimpleCard>
-          <SimpleCard>
-            <h2>Static Websites</h2>
+          </ShowcaseCard>
+          <ShowcaseCard name="Static Websites">
             <p>
               I can build portfolio websites, showcase websites, and other
               static websites for your personal or business needs. Suitable for
               landing pages, blogs, portfolios such as photography, and more.
             </p>
-          </SimpleCard>
-          <SimpleCard>
-            <h2>Desktop Applications</h2>
+          </ShowcaseCard>
+          <ShowcaseCard name="Desktop Applications">
             <p>
               I build custom desktop applications ranging from Point-of-Sales
               systems to personal tools. I can integrate third-party APIs and
               services to your application to make it more powerful and useful
               depending on your needs.
             </p>
-          </SimpleCard>
+          </ShowcaseCard>
         </CardContainer>
         {/* <SimpleCard>
           <p>

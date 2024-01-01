@@ -21,7 +21,7 @@ const projectDataItems = projects.map((project) => {
 const Projects = () => (
   <section class={styles.projects}>
     <h1>Projects List</h1>
-    <CardContainer grid={true}>{projectDataItems}</CardContainer>
+    <CardContainer grid="2">{projectDataItems}</CardContainer>
   </section>
 );
 
