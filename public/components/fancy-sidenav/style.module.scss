@@ -1,0 +1,27 @@
+.nav-active-area {
+  position: fixed;
+  width: 512px;
+  height: 100dvh;
+  right: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  background-color: #ff000050;
+  opacity: 1;
+  transition: all 0.25s ease-in-out;
+}
+.hidden {
+  opacity: 0;
+  right: -256px;
+  width: 256px;
+}
+
+.nav-container {
+  position: absolute;
+  right: 1rem;
+  width: 128px;
+  aspect-ratio: 1/2;
+
+  background-color: #fffffff0;
+}
