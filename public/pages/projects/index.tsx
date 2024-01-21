@@ -14,7 +14,9 @@ const projectDataItems = projects.map((project) => {
       feature={project.feature}
       isClickable={true}
       isThin={true}
-    ></ProjectCard>
+    >
+      description
+    </ProjectCard>
   );
 });
 

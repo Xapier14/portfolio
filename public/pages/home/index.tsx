@@ -19,6 +19,7 @@ import {
   ServerIcon,
   WebIcon,
 } from "../../components/icons";
+import FancySideNav from "../../components/fancy-sidenav";
 export function Home() {
   const copyToClipboardAsync = async (text: string) => {
     try {
@@ -83,6 +84,7 @@ export function Home() {
             </span>
           </div>
         </div>
+        <FancySideNav />
       </section>
       <section id="about" class={style["about"]}>
         <h1>My Services</h1>

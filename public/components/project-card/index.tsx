@@ -27,7 +27,8 @@ export default function ProjectCard(props: ProjectCardProps) {
   const hasLink = props.infoLink != null;
   const hasDemo = props.demo != null;
   const isClickable = props.isClickable ?? false;
-  const showBody = hasGitHub || hasLink || hasDemo;
+  const showActions = hasGitHub || hasLink || hasDemo;
+  const showDescription = props.children != undefined;
   const isThin = props.isThin ?? false;
 
   function onCardClick() {
@@ -45,7 +46,7 @@ export default function ProjectCard(props: ProjectCardProps) {
       {hasFeature ? (
         <div
           class={style["project-image-container"]}
-          style={`${isThin ? "aspect-ratio: 24/9;" : ""}`}
+          style={`${isThin ? "aspect-ratio: 21/9;" : ""}`}
         >
           {isFeatureJsxElement ? (
             hasFeatureProps ? (
@@ -72,11 +73,13 @@ export default function ProjectCard(props: ProjectCardProps) {
         ) : null}
         <h2>{props.name}</h2>
       </div>
-      {showBody ? (
-        <div class={style["project-card-body"]}>
+      <div class={style["project-card-body"]}>
+        {showDescription ? (
           <div class={style["project-card-body-description"]}>
             {props.children}
           </div>
+        ) : null}
+        {showActions ? (
           <div class={style["project-card-body-actions"]}>
             <div class={style["left"]}>
               {hasGitHub ? (
@@ -94,10 +97,10 @@ export default function ProjectCard(props: ProjectCardProps) {
               ) : null}
             </div>
           </div>
-        </div>
-      ) : (
-        <></>
-      )}
+        ) : (
+          <></>
+        )}
+      </div>
     </div>
   );
 }
