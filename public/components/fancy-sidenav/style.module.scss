@@ -1,27 +1,117 @@
+@import "../../styles/colors.scss";
+
+$nav-select-color: #d5c3ee;
+$nav-normal-color: #bcaad8;
+$nav-glow-color: #bb9de4b2;
+
 .nav-active-area {
   position: fixed;
-  width: 512px;
-  height: 100dvh;
-  right: 0;
+  height: 50dvh;
   display: flex;
   justify-content: flex-end;
   align-items: center;
 
-  background-color: #ff000050;
-  opacity: 1;
-  transition: all 0.25s ease-in-out;
-}
-.hidden {
+  transition: all 0.2s ease-in-out;
+
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  align-items: center;
+  z-index: 100;
+
   opacity: 0;
   right: -256px;
-  width: 256px;
+  width: 10dvw;
+  transform: scale(0.75);
+
+  @media (max-width: 1099px) {
+    display: none;
+  }
+}
+.nav-active-area-visible {
+  opacity: 1;
+  right: 0;
+  width: 20dvw;
+  transform: scale(1);
 }
 
-.nav-container {
-  position: absolute;
-  right: 1rem;
-  width: 128px;
-  aspect-ratio: 1/2;
+.nav-show-container {
+  opacity: 0.5;
+  margin-right: 2rem;
+  margin-left: 1rem;
+  width: 3.5rem;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  background: transparent;
+  border: $nav-normal-color;
+  border-style: solid;
+  clip-path: circle(50% at 50% 50%);
 
-  background-color: #fffffff0;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.125s ease-in-out;
+  box-shadow: 0px 0px 5px $nav-glow-color;
+  svg {
+    width: 60%;
+    height: 60%;
+    transition: all 0.2s ease-in-out;
+    stroke: $nav-normal-color;
+    stroke-width: 2px;
+  }
+}
+
+.nav-show-container-active {
+  opacity: 0.8;
+  box-shadow: 0px 0px 15px $nav-glow-color;
+}
+
+.nav-links {
+  overflow: hidden;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  height: 100%;
+  opacity: 0;
+  transition: transform 0.15s ease-in-out, opacity 0.1s ease-in-out;
+  transform: translateX(25%);
+  ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 0;
+    list-style: none;
+    overflow: hidden;
+    transition: height 0.15s ease-in-out;
+    li {
+      width: 128px;
+      text-align: center;
+      padding: 0.125rem 0;
+      a {
+        color: $nav-normal-color;
+        text-decoration: none;
+        font-size: 1.5rem;
+        width: 100%;
+        transition: all 0.125s ease-in-out;
+        text-shadow: 0px 0px 10px $nav-glow-color;
+        &:hover {
+          color: $nav-select-color;
+          font-size: 1.75rem;
+          text-shadow: 0px 0px 20px $nav-glow-color;
+        }
+      }
+    }
+  }
+}
+
+.visible {
+  opacity: 1;
+  transform: translateX(0);
+  ul {
+    height: 100%;
+  }
 }
