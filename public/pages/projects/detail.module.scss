@@ -1,0 +1,58 @@
+.projects {
+  display: grid;
+  gap: 0 0;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+.title-header {
+  margin-top: 1.25rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  .accent {
+    margin-right: 0.75rem;
+    width: 1.5rem;
+    aspect-ratio: 1/1;
+    // center
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .route-path-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: hidden;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+    a,
+    span {
+      margin-right: 0.5rem;
+      font-size: 1.2rem;
+      color: var(--color-text);
+      text-decoration: none;
+    }
+    a {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    span {
+      cursor: default;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      &::before {
+        content: "/";
+        margin-right: 0.5rem;
+      }
+    }
+  }
+}
