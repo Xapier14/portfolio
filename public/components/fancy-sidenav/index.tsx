@@ -71,9 +71,9 @@ export default function FancySideNav() {
           <li>
             <a href="/projects">Projects</a>
           </li>
-          <li>
+          {/* <li>
             <a href="https://blog.xapier.me">Blog</a>
-          </li>
+          </li> */}
           <li>
             <a href="/contact">Contact</a>
           </li>
