@@ -6,7 +6,7 @@ $nav-glow-color: #bb9de4b2;
 
 .nav-active-area {
   position: fixed;
-  height: 50dvh;
+  height: 60dvh;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -45,7 +45,6 @@ $nav-glow-color: #bb9de4b2;
   background: transparent;
   border: $nav-normal-color;
   border-style: solid;
-  clip-path: circle(50% at 50% 50%);
 
   z-index: 100;
   display: flex;
@@ -60,11 +59,23 @@ $nav-glow-color: #bb9de4b2;
     stroke: $nav-normal-color;
     stroke-width: 2px;
   }
+  span {
+    opacity: 0;
+    position: absolute;
+    display: block;
+    transform: translateY(-3rem);
+    transition: all 0.2s ease-in-out;
+  }
+}
+
+.nav-show-label-visible {
+  opacity: 1 !important;
 }
 
 .nav-show-container-active {
   opacity: 0.8;
   box-shadow: 0px 0px 15px $nav-glow-color;
+  transform: scale(0.85);
 }
 
 .nav-links {

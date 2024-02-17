@@ -6,6 +6,7 @@ import { MobileIcon } from "./MobileIcon";
 import { DevIcon } from "./DevIcon";
 import { CloudIcon } from "./CloudIcon";
 import { GitHubIcon } from "./GitHubIcon";
+import { DownIcon } from "./DownIcon";
 
 // export all icons
 export { CopyIcon, CopyIconMini };
@@ -16,3 +17,4 @@ export { MobileIcon };
 export { DevIcon };
 export { CloudIcon };
 export { GitHubIcon };
+export { DownIcon };

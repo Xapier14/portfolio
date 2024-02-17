@@ -11,17 +11,16 @@
     "seeAlso": ["action-companion"],
     "dateAddedUtc": "2023-12-28T04:33:54Z",
     "technologies": [
-      "Node.js",
-      "Express.js",
-      "Angular",
-      "MongoDB",
-      "Mongoose",
-      "Docker",
-      "ReCaptcha Enterprise",
-      "Azure App Service",
-      "Azure Blob Storage",
-      "Azure Container Registry",
-      "Cloudflare Pages"
+      "node",
+      "express",
+      "angular",
+      "mongodb",
+      "mongoose",
+      "docker",
+      "recaptcha",
+      "azure-app-service",
+      "azure-blob-storage",
+      "cloudflare-pages"
     ]
   },
   {
@@ -36,18 +35,17 @@
     "seeAlso": ["action-dashboard"],
     "dateAddedUtc": "2023-12-28T04:33:54Z",
     "technologies": [
-      "Node.js",
-      "Express.js",
-      "Ionic",
-      "Angular",
-      "MongoDB",
-      "Mongoose",
-      "Docker",
-      "ReCaptcha Enterprise",
-      "Azure App Service",
-      "Azure Blob Storage",
-      "Azure Container Registry",
-      "Cloudflare Pages"
+      "node",
+      "express",
+      "angular",
+      "mongodb",
+      "mongoose",
+      "docker",
+      "recaptcha",
+      "ionic",
+      "azure-app-service",
+      "azure-blob-storage",
+      "cloudflare-pages"
     ]
   }
 ]

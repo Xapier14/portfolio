@@ -13,6 +13,12 @@
   -webkit-text-size-adjust: 100%;
 }
 
+button {
+  font-family: "Geologica", Inter, system-ui, Avenir, Helvetica, Arial,
+    sans-serif;
+  color: $fg-color;
+}
+
 /* width */
 ::-webkit-scrollbar {
   width: 4px;

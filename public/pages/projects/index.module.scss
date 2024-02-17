@@ -1,0 +1,112 @@
+$select-color: #d5c3ee;
+$normal-color: #bcaad8;
+$nav-glow-color: #bb9de4b2;
+$border-color: #826fa1b0;
+.filter-container {
+  margin: 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  :global(.chip) {
+    font-family: "Inconsolata", "monospace", sans-serif;
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+  }
+  border: 1px solid $border-color;
+  border-radius: 0.5rem;
+  &:first-of-type {
+    margin-top: 0;
+  }
+  .filter-collapsible {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    border-radius: 0.5rem;
+    outline: none;
+    &,
+    &[type="button"] {
+      outline: none;
+    }
+    &::-moz-focus-inner,
+    &[type="button"]::-moz-focus-inner {
+      border: 0;
+    }
+
+    transition: background-color 0.3s ease;
+
+    span {
+      display: inline-block;
+      margin: 0.5rem 0.75rem 0.5rem 0.75rem;
+      user-select: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      -o-user-select: none;
+    }
+    svg {
+      height: 1.5rem;
+      margin-right: 0.5rem;
+    }
+
+    .filter-close {
+      opacity: 0.75;
+      transition: opacity 0.3s ease;
+    }
+    &:hover {
+      background-color: rgba($select-color, 0.1);
+      .filter-close {
+        opacity: 1;
+      }
+    }
+  }
+
+  .filter-collapsible-disabled {
+    // cursor: default;
+    &:hover {
+      background-color: transparent;
+    }
+  }
+
+  .filter-chips {
+    margin: 0.5rem;
+    margin-top: 0;
+    margin-bottom: 0rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+
+  .filter-chips-visible {
+    margin-top: 0.25rem;
+    margin-bottom: 0.5rem;
+    max-height: unset;
+  }
+}
+
+.projects-container {
+  margin-bottom: 1rem;
+}
+
+.filter-card {
+  padding: 0;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  margin-top: 1rem;
+  width: 100%;
+  .filter-card-title {
+    display: inline-block;
+    margin-top: 0.25rem;
+    margin-left: 1rem;
+  }
+}
+
+.project-chip-container {
+  :global(.chip) {
+    font-family: "Inconsolata", "monospace", sans-serif;
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+  }
+}

@@ -1,4 +1,5 @@
 import { GitHubIcon } from "../icons";
+import { useLocation } from "preact-iso";
 
 import style from "./style.module.scss";
 import "../common/card-style.scss";
@@ -13,6 +14,7 @@ interface ProjectCardProps {
   featureProps?: any;
   children?: any;
   isClickable?: boolean;
+  clickRoute?: string;
   isThin?: boolean;
   link?: string;
 }
@@ -30,9 +32,14 @@ export default function ProjectCard(props: ProjectCardProps) {
   const showActions = hasGitHub || hasLink || hasDemo;
   const showDescription = props.children != undefined;
   const isThin = props.isThin ?? false;
+  const clickRoute = props.clickRoute ?? "";
+
+  const location = useLocation();
 
   function onCardClick() {
-    console.log("test!");
+    if (isClickable) {
+      location.route(clickRoute);
+    }
   }
 
   return (

@@ -43,4 +43,4 @@ function getIcon(icon: string): () => JSXInternal.Element | null {
   }
 }
 
-export { projects, getIcon };
+export { projects, getIcon, Project };
