@@ -1,0 +1,79 @@
+{
+  "platforms": [
+    {
+      "label": "Web",
+      "value": "web"
+    },
+    {
+      "label": "Mobile",
+      "value": "mobile"
+    },
+    {
+      "label": "Desktop",
+      "value": "desktop"
+    },
+    {
+      "label": "Server/Cloud",
+      "value": "server"
+    }
+  ],
+  "languages": [],
+  "technologies": [
+    {
+      "label": ".NET",
+      "value": "dotnet"
+    },
+    {
+      "label": "Node.JS",
+      "value": "node"
+    },
+    {
+      "label": "Express.JS",
+      "value": "express"
+    },
+    {
+      "label": "React",
+      "value": "react"
+    },
+    {
+      "label": "Angular",
+      "value": "angular"
+    },
+    {
+      "label": "Preact",
+      "value": "preact"
+    },
+    {
+      "label": "Ionic",
+      "value": "ionic"
+    },
+    {
+      "label": "MongoDB",
+      "value": "mongodb"
+    },
+    {
+      "label": "Mongoose",
+      "value": "mongoose"
+    },
+    {
+      "label": "Docker",
+      "value": "docker"
+    },
+    {
+      "label": "ReCaptcha",
+      "value": "recaptcha"
+    },
+    {
+      "label": "Azure App Service",
+      "value": "azure-app-service"
+    },
+    {
+      "label": "Azure Blob Storage",
+      "value": "azure-blob-storage"
+    },
+    {
+      "label": "Cloudflare Pages",
+      "value": "cloudflare-pages"
+    }
+  ]
+}

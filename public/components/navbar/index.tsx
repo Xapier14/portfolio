@@ -93,9 +93,6 @@ export function NavBar() {
               <a href="/projects">Projects</a>
             </li>
             <li>
-              <a href="https://blog.xapier.me">Blog</a>
-            </li>
-            <li>
               <a href="/contact">Contact</a>
             </li>
           </ul>

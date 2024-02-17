@@ -51,6 +51,13 @@ export default function FancySideNav() {
         }`}
         onMouseEnter={enterNavShow}
       >
+        <span
+          class={`${
+            isInActiveArea && !showLinks ? style["nav-show-label-visible"] : ""
+          }`}
+        >
+          Links
+        </span>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -70,9 +77,6 @@ export default function FancySideNav() {
         <ul>
           <li>
             <a href="/projects">Projects</a>
-          </li>
-          <li>
-            <a href="https://blog.xapier.me">Blog</a>
           </li>
           <li>
             <a href="/contact">Contact</a>

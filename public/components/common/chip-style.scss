@@ -1,0 +1,53 @@
+@import "../../styles/colors.scss";
+
+.chip-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  width: 100%;
+}
+
+.chip {
+  color: $fg-color;
+  font-size: 0.85rem;
+  margin: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid $fg-color;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  &:hover {
+    background-color: $fg-color;
+    color: $bg-color;
+    border: 1px solid $fg-color;
+  }
+
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+}
+
+.active-chip {
+  background-color: $fg-color;
+  color: $bg-color;
+  border: 1px solid $fg-color;
+}
+
+.chip-no-select {
+  .chip {
+    &:hover {
+      background-color: transparent;
+      color: $fg-color;
+      border: 1px solid $fg-color;
+    }
+  }
+}

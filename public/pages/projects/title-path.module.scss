@@ -6,12 +6,13 @@
 }
 .title-header {
   margin-top: 1.25rem;
+  margin-bottom: 1rem;
   display: flex;
-  flex-direction: row;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   justify-content: flex-start;
   .accent {
-    margin-right: 0.75rem;
+    margin-right: 0.5rem;
     width: 1.5rem;
     aspect-ratio: 1/1;
     // center
@@ -34,6 +35,8 @@
     user-select: none; /* Standard syntax */
     a,
     span {
+      display: flex;
+      flex-direction: row;
       margin-right: 0.5rem;
       font-size: 1.2rem;
       color: var(--color-text);
@@ -49,10 +52,6 @@
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
-      &::before {
-        content: "/";
-        margin-right: 0.5rem;
-      }
     }
   }
 }
