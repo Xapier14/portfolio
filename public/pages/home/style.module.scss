@@ -127,6 +127,9 @@ $about-card-border-shadow-color: #0f0f0fb0;
 }
 
 .landing-description {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
   margin: 0;
   font-size: 1rem;
   font-weight: 300;

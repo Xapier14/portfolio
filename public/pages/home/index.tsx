@@ -20,6 +20,8 @@ import {
   WebIcon,
 } from "../../components/icons";
 import FancySideNav from "../../components/fancy-sidenav";
+import { useEffect, useState } from "preact/hooks";
+
 export function Home() {
   const copyToClipboardAsync = async (text: string) => {
     try {
@@ -29,21 +31,28 @@ export function Home() {
     }
   };
 
-  // get latest 3 projects
-  const projectDataItems = projects.copyWithin(3, 0).map((project) => {
-    const icon = getIcon(project.type);
-    return (
-      <ProjectCard
-        key={project.id}
-        name={project.name}
-        icon={icon}
-        infoLink={`projects/${project.id}`}
-        feature={project.feature}
-        github={project.github}
-        demo={project.demo}
-      ></ProjectCard>
+  const [projectDataItems, setProjectDataItems] = useState([]);
+
+  useEffect(() => {
+    // get latest 3 projects
+    var latestProjects = projects.slice(0, 3);
+    setProjectDataItems(
+      latestProjects.map((project) => {
+        const icon = getIcon(project.type);
+        return (
+          <ProjectCard
+            key={project.id}
+            name={project.name}
+            icon={icon}
+            infoLink={`projects/${project.id}`}
+            feature={project.feature}
+            github={project.github}
+            demo={project.demo}
+          ></ProjectCard>
+        );
+      })
     );
-  });
+  }, []);
 
   return (
     <>
@@ -79,8 +88,10 @@ export function Home() {
             </div>
           </div>
           <div class={style["landing-description"]}>
+            <span>I'm a software developer based in The Philippines.</span>
             <span>
-              I'm a student and a software developer based in The Philippines.
+              Currently working as a frontend developer, but can also work on
+              full-stack applications.
             </span>
           </div>
         </div>
