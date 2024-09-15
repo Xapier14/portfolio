@@ -24,6 +24,10 @@
       "value": "dotnet"
     },
     {
+      "label": "C#",
+      "value": "csharp"
+    },
+    {
       "label": "Node.JS",
       "value": "node"
     },
@@ -74,6 +78,10 @@
     {
       "label": "Cloudflare Pages",
       "value": "cloudflare-pages"
+    },
+    {
+      "label": "SDL2",
+      "value": "sdl2"
     }
   ]
 }

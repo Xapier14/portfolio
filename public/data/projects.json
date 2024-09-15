@@ -47,5 +47,52 @@
       "azure-blob-storage",
       "cloudflare-pages"
     ]
+  },
+  {
+    "name": "MiniEngine",
+    "description": "An experimental 2D Game Engine written in C# and SDL2. Features an Entity-Component-System architecture and a simple scripting API.",
+    "id": "mini-engine",
+    "type": "desktop",
+    "feature": "/assets/projects/mini-engine.png",
+    "github": "https://github.com/Xapier14/MiniEngine",
+    "screenshots": [],
+    "seeAlso": [],
+    "dateAddedUtc": "2023-12-28T04:33:54Z",
+    "technologies": [
+      "dotnet",
+      "sdl2",
+      "csharp"
+    ]
+  },
+  {
+    "name": "Cerulean",
+    "description": "A cross-platform UI framework for developing desktop applications using C# and XML.",
+    "id": "cerulean",
+    "type": "desktop",
+    "feature": "/assets/projects/cerulean.png",
+    "github": "https://github.com/Xapier14/Cerulean",
+    "screenshots": [],
+    "seeAlso": [],
+    "dateAddedUtc": "2023-12-28T04:33:54Z",
+    "technologies": [
+      "dotnet",
+      "sdl2",
+      "csharp"
+    ]
+  },
+  {
+    "name": "MathEvaluator",
+    "description": "A math expression evaluator written in C#. Uses the Shunting Yard algorithm to convert infix expressions to postfix and evaluate them.",
+    "id": "math-evaluator",
+    "type": "desktop",
+    "feature": "/assets/projects/math-evaluator.png",
+    "github": "https://github.com/Xapier14/MathEvaluator",
+    "screenshots": [],
+    "seeAlso": [],
+    "dateAddedUtc": "2023-12-28T04:33:54Z",
+    "technologies": [
+      "dotnet",
+      "csharp"
+    ]
   }
 ]

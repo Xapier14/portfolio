@@ -1,0 +1,14 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  .contact-card {
+    max-width: 70%;
+    // if the screen is smaller than 768px, the height will be 100%
+    @media (max-width: 768px) {
+      max-width: 100%;
+    }
+  }
+
+}

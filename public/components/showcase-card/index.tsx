@@ -6,6 +6,7 @@ interface ShowcaseCardProps {
   icon?: string | (() => JSX.Element);
   showcase?: string | (() => JSX.Element);
   children?: any;
+  class?: string;
 }
 
 export default function ShowcaseCard(props: ShowcaseCardProps) {
@@ -14,7 +15,7 @@ export default function ShowcaseCard(props: ShowcaseCardProps) {
   const hasShowcase = props.showcase != null;
   const isShowcaseJsxElement = typeof props.showcase != "string";
   return (
-    <div class={`card active-glow ${style["showcase-card"]}`}>
+    <div class={`card active-glow ${style["showcase-card"]} ${props.class}`}>
       <div class="card-bg"></div>
       {hasShowcase ? (
         <div class={style["showcase-image-container"]}>
