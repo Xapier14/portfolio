@@ -3,6 +3,8 @@
   justify-content: center;
   align-items: center;
   flex-grow: 1;
+  height: 100%;
+  margin-top: 4rem;
   .contact-card {
     max-width: 70%;
     // if the screen is smaller than 768px, the height will be 100%
@@ -10,5 +12,13 @@
       max-width: 100%;
     }
   }
+}
 
+a {
+  color: #cfc2e2;
+  text-decoration: none;
+  transition: color 0.125s ease-in-out;
+  &:hover {
+    color: #f0e5ff;
+  }
 }

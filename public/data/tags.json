@@ -36,6 +36,22 @@
       "value": "express"
     },
     {
+      "label": "Flask",
+      "value": "flask"
+    },
+    {
+      "label": "OpenCV",
+      "value": "opencv"
+    },
+    {
+      "label": "YOLO",
+      "value": "yolo"
+    },
+    {
+      "label": "Artificial Intelligence",
+      "value": "ai"
+    },
+    {
       "label": "React",
       "value": "react"
     },

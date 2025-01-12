@@ -1,9 +1,15 @@
 import titleStyles from "./title-path.module.scss";
+import styles from "./detail.module.scss";
 import { projects, getIcon, Project } from "../../data/projects";
+import { useState } from "preact/hooks";
+import { GitHubIcon } from "../../components/icons";
 
 export function ProjectsDetail(query: any) {
   const id = query.id;
   const project = projects.find((p) => p.id === id);
+
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
   return (
     <section class={titleStyles.projects}>
       <div class={titleStyles["title-header"]}>
@@ -30,6 +36,73 @@ export function ProjectsDetail(query: any) {
           <span>/</span>
           <span>{project.name}</span>
         </div>
+      </div>
+      <div class={styles["gallery-container"]}>
+        {/* Gallery */}
+        <div class={`card active-glow ${styles["gallery-main-image"]}`}>
+          {project.screenshots.length === 0 && (
+            <div class={styles["gallery-image"]}>
+              <span>No screenshot available.</span>
+            </div>
+          )}
+          {project.screenshots.length !== 0 && (
+            <img
+              class={styles["gallery-image"]}
+              src={project.screenshots[currentImageIndex]}
+            />
+          )}
+          <div class="card-bg" />
+        </div>
+        <div style="overflow: auto;">
+          {project.screenshots.length !== 0 && (
+            <div class={styles["gallery-thumbnails"]}>
+              {project.screenshots?.map((image, index) => (
+                <button
+                  type="button"
+                  class={`card active-glow ${styles["gallery-thumbnail"]} ${
+                    currentImageIndex === index
+                      ? styles["gallery-thumbnail-active"]
+                      : ""
+                  }`}
+                  onClick={() => setCurrentImageIndex(index)}
+                >
+                  <img
+                    style="object-fit: cover;"
+                    class={styles["gallery-image"]}
+                    src={image}
+                  />
+                </button>
+              ))}
+            </div>
+          )}
+        </div>
+      </div>
+      <div class={`card active-glow ${styles["header-container"]}`}>
+        <div class="card-bg" />
+        <div class={styles["actions"]}>
+          <div class={styles["left"]}>
+            {project.github !== undefined ? (
+              <a href={project.github} target="_blank">
+                <GitHubIcon />
+              </a>
+            ) : null}
+          </div>
+          <div class={styles["right"]}>
+            {project.demo !== undefined ? (
+              <a href={project.demo} target="_blank">
+                View Demo
+              </a>
+            ) : null}
+          </div>
+        </div>
+        <span>{project.name}</span>
+      </div>
+      <div class={`card active-glow ${styles["description-container"]}`}>
+        <div class="card-bg" />
+        {/* Description */}
+        <p class={styles.description}>
+          {project.description ?? "No description available."}
+        </p>
       </div>
     </section>
   );

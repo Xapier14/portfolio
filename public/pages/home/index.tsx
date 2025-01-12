@@ -144,13 +144,13 @@ export function Home() {
               <TechListItem>CSS3</TechListItem>
               <TechListItem>SASS/SCSS</TechListItem>
               <TechListItem>React</TechListItem>
-              <TechListItem>Preact</TechListItem>
+              <TechListItem>Next.JS</TechListItem>
               <TechListItem>Angular</TechListItem>
             </TechList>
           </ShowcaseCard>
           <ShowcaseCard name="Backend" icon={ServerIcon}>
             <TechList singleColumn={true}>
-              <TechListItem>Firebase</TechListItem>
+              <TechListItem>Flask</TechListItem>
               <TechListItem>Express.JS</TechListItem>
               <TechListItem>ASP.NET Core</TechListItem>
             </TechList>

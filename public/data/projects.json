@@ -1,13 +1,20 @@
 [
   {
     "name": "ACTION Dashboard",
-    "description": "A dashboard for the Batangas State University's ACTION Center. Monitors and keeps track of building status and inspector generated reports.",
+    "description": "A dashboard for the Batangas State University's ACTION Center.\nMonitors and keeps track of building status and inspector generated reports.\n\nFeatures:\n - Real-time building status monitoring\n - Report generation and management\n - User management and authentication\n - Recaptcha verification\n - Image upload and storage\n - Dockerized deployment\n - Azure Blob Storage integration\n - Cloudflare Pages deployment",
     "id": "action-dashboard",
     "type": "web",
     "feature": "/assets/projects/action-dashboard.png",
-    "demo": "https://action.xapier.me",
     "github": "https://github.com/Xapier14/action-dashboard",
-    "screenshots": [],
+    "screenshots": [
+      "/assets/projects/action-dashboard/1.png",
+      "/assets/projects/action-dashboard/2.png",
+      "/assets/projects/action-dashboard/3.png",
+      "/assets/projects/action-dashboard/4.png",
+      "/assets/projects/action-dashboard/5.png",
+      "/assets/projects/action-dashboard/6.png",
+      "/assets/projects/action-dashboard/7.png"
+    ],
     "seeAlso": ["action-companion"],
     "dateAddedUtc": "2023-12-28T04:33:54Z",
     "technologies": [
@@ -25,13 +32,16 @@
   },
   {
     "name": "ACTION Companion",
-    "description": "A mobile companion app for the Batangas State University's ACTION Center. Allows inspectors to generate reports and monitor building status.",
+    "description": "A mobile companion app for the Batangas State University's ACTION Center.\nAllows inspectors to generate reports and monitor building status.\n\nFeatures:\n - Campus-based information isolation\n - Real-time building status monitoring\n - Report collection and submission\n - Recaptcha verification\n - Image upload and storage\n - Dockerized deployment\n - Azure Blob Storage integration\n - Cloudflare Pages deployment",
     "id": "action-companion",
     "type": "mobile",
     "feature": "/assets/projects/action-companion.png",
-    "demo": "https://action-mobile.pages.dev",
     "github": "https://github.com/Xapier14/action-companion",
-    "screenshots": [],
+    "screenshots": [
+      "/assets/projects/action-companion/1.png",
+      "/assets/projects/action-companion/2.png",
+      "/assets/projects/action-companion/3.png"
+    ],
     "seeAlso": ["action-dashboard"],
     "dateAddedUtc": "2023-12-28T04:33:54Z",
     "technologies": [
@@ -50,19 +60,15 @@
   },
   {
     "name": "MiniEngine",
-    "description": "An experimental 2D Game Engine written in C# and SDL2. Features an Entity-Component-System architecture and a simple scripting API.",
+    "description": "An experimental 2D Game Engine written in C# and SDL2.\nFeatures an Entity-Component-System architecture and a simple scripting API.\n\nFeatures:\n - Entity-Component-System architecture\n - Simple scripting API\n - SDL2 rendering\n - Virtualized File System\n - Asset & Scene Management\n - Extensible Plugin System\n - Cross-platform support",
     "id": "mini-engine",
     "type": "desktop",
-    "feature": "/assets/projects/mini-engine.png",
+    "feature": "/assets/projects/miniengine.png",
     "github": "https://github.com/Xapier14/MiniEngine",
-    "screenshots": [],
+    "screenshots": ["/assets/projects/miniengine/1.png"],
     "seeAlso": [],
     "dateAddedUtc": "2023-12-28T04:33:54Z",
-    "technologies": [
-      "dotnet",
-      "sdl2",
-      "csharp"
-    ]
+    "technologies": ["dotnet", "sdl2", "csharp"]
   },
   {
     "name": "Cerulean",
@@ -71,28 +77,26 @@
     "type": "desktop",
     "feature": "/assets/projects/cerulean.png",
     "github": "https://github.com/Xapier14/Cerulean",
-    "screenshots": [],
+    "screenshots": ["/assets/projects/cerulean/1.png"],
     "seeAlso": [],
     "dateAddedUtc": "2023-12-28T04:33:54Z",
-    "technologies": [
-      "dotnet",
-      "sdl2",
-      "csharp"
-    ]
+    "technologies": ["dotnet", "sdl2", "csharp"]
   },
   {
-    "name": "MathEvaluator",
-    "description": "A math expression evaluator written in C#. Uses the Shunting Yard algorithm to convert infix expressions to postfix and evaluate them.",
-    "id": "math-evaluator",
-    "type": "desktop",
-    "feature": "/assets/projects/math-evaluator.png",
-    "github": "https://github.com/Xapier14/MathEvaluator",
-    "screenshots": [],
+    "name": "IRIS Surveillance System",
+    "description": "A real-time surveillance system that uses AI to detect and recognize PPE and equipment in a school laboratory setting.\n\nFeatures:\n - Real-time object detection\n - Object recognition\n - Object tracking\n - User management and authentication\n - Data Aggregation and Visualization\n\nThis project was developed as a research project for the Batangas State University.\n\nResponsibilities:\n - AI Model Training\n - Backend Development\n - Deployment\n - Video Processing\n - Data Visualization",
+    "id": "iris",
+    "type": "cloud",
+    "feature": "/assets/projects/iris.png",
+    "github": "https://github.com/Project-Iris-CV/iris-surveillance-service",
+    "screenshots": [
+      "/assets/projects/iris/1.png",
+      "/assets/projects/iris/2.png",
+      "/assets/projects/iris/3.png",
+      "/assets/projects/iris/4.png"
+    ],
     "seeAlso": [],
-    "dateAddedUtc": "2023-12-28T04:33:54Z",
-    "technologies": [
-      "dotnet",
-      "csharp"
-    ]
+    "dateAddedUtc": "2025-01-11T04:33:54Z",
+    "technologies": ["react", "flask", "mongodb", "opencv", "yolo", "ai"]
   }
 ]
